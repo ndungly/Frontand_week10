@@ -66,25 +66,18 @@ a.nav-home {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    font-weight: 900;
+    font-weight: 700;
     text-align: center;
-}
-
-.button-orange {
-    background-color: #F77F00;
-}
-
-.button-black {
-    background-color: #111;
 }
 
 .nav-inschrijven,.nav-inloggen {
     padding: .8rem 1.5rem;
     color: white;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     font-size: .8rem;
     margin: .3rem;
+    letter-spacing: .05rem;
 }
 
 .nav-inschrijven {
@@ -124,16 +117,26 @@ main {
     ". search-panel .";
 }
 
+.banner-container-1 {
+    grid-area: banner;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.banner {
+    min-width: 100%;
+}
+
 .banner-title-1 {
     grid-area: banner-title-1;
     font-size: 2.5rem;
-    margin-top: -25rem;
+    margin-top: -16rem;
 }
 
 .banner-title-2 {
     grid-area: banner-title-2;
     font-size: 2.5rem;
-    margin-top: -8.9em;
+    margin-top: -5.2em;
 }
 
 .h1-white {
@@ -141,6 +144,7 @@ main {
     color: white;
     padding: 0.3rem 1rem;
     background-color: #111;
+    font-weight: 800;
 }
 
 .h1-orange {
@@ -150,10 +154,10 @@ main {
 .search-panel {
     background-color: #111;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-column-gap: 1.8rem;
-    padding: 2.5rem 1.5rem 2rem 1.5rem;
-    height: 10rem;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    min-height: 10rem;
     margin-top: -5rem;
 }
 
@@ -168,6 +172,7 @@ main {
     flex-direction: column;
     height: 5rem;
     justify-content: flex-end;
+    margin-top: 1rem;
 }
 
 .input-trefwoord {
@@ -176,6 +181,7 @@ main {
     flex-direction: column;
     height: 5rem;
     justify-content: flex-end;
+    margin-top: 1rem;
 }
 
 input {
@@ -194,6 +200,7 @@ input {
     flex-direction: column;
     justify-content: flex-end;
     height: 5rem;
+    margin-top: 1rem;
 }
 
 .vacatures-zoeken p {
@@ -206,11 +213,8 @@ input {
     width: 100%;
     background-color: #F77F00;
     text-align: center;
-}
-
-.banner {
-    grid-area: banner;
-    width: 100%;
+    letter-spacing: .05rem;
+    font-weight: 700;
 }
 
 .search-panel {
@@ -223,7 +227,7 @@ input {
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 15px 0 #e8e8e8; 
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1); 
 }
 
 .adsb-top {
@@ -265,10 +269,11 @@ input {
     grid-area: wwjw-dienstverband;
     display: flex;
     margin-top: 4rem;
+    flex-wrap: wrap;
 }
 
 .wwjw {
-    flex: 1 1 auto;
+    flex: 1 1 22.5rem;
     margin-right: 2rem;
     display: flex;
     flex-direction: column;
@@ -306,7 +311,7 @@ input {
     margin: 0 0 .7rem 0;
 }
 .dienstverband {
-    flex: 1 1 auto;
+    flex: 1 1 22.5rem;
     margin-right: 2rem;
 }
 
@@ -318,7 +323,7 @@ input {
     grid-area: content;
     display: grid;
     grid-column-gap: 1.8rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
     margin-top: 5rem;
 }
 
@@ -334,10 +339,11 @@ input {
 
 .article {
     background-color: white;
-    box-shadow: 0 0 15px 0 #e8e8e8; 
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1); 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .article-title {
@@ -366,14 +372,22 @@ input {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
     grid-template-areas:
-    "vacatures-img vacatures-img vacatures-img"
+    "banner2 banner2 banner2"
     ". vacatures-block ."; 
+    text-align: center;
+}
+
+.banner-container-2 {
+    grid-area: banner2;
+    height: 30rem;
+    overflow: hidden;
+    margin-top: 6rem;
 }
 
 .vacatures-img {
     grid-area: vacatures-img;
-    width: 100%;
-    margin-top: 6rem;
+    min-width: 100%;
+    margin-top: -3rem;
 }
 
 .vacatures-block {
@@ -381,20 +395,51 @@ input {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 18rem;
-    margin-top: -9rem;
+    min-height: 24rem;
+    margin-top: -12rem;
+    margin-bottom: 6rem;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1); 
+    align-items: center;
 }
 
 .vacatures-top {
     border-bottom: 1px solid #e8e8e8;
-    text-align: center;
     padding: 2rem;
 }
 
 .nav-vacatures {
     display: flex;
-    flex-direction: row;
     list-style-type: none;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+} 
+
+.nav-vacatures li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link-vac {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    width: 10rem;
+    height: 9rem;
+    margin: 0 .5rem;
+}
+
+.vac-img {
+    margin-bottom: 1rem;
+}
+
+.vacatures-block p {
+    margin-bottom: 2rem;
 }
 
 .footer {
@@ -420,4 +465,29 @@ input {
     color: white;
     font-weight: 600;
     letter-spacing: .05rem;
+}
+
+.footer-nav-list {
+    list-style-type: none;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.footer-nav-list li {
+    margin: 1.2rem 0;
+}
+
+.footer-nav-item {
+    color: white;
+    text-decoration: none;
+    letter-spacing: .05rem;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .banner-title-1, .banner-title-2 {
+        display: none;
+    }
 }
