@@ -28,37 +28,37 @@
 .header-content {
     grid-area: header-content;
     display: flex;
-    height: 4rem;
     align-items: center;
     justify-content: space-between;
 }
 
 .nav-left {
     display: flex;
+    align-items: center;
+    flex: 2 1 auto;
+}
+
+a.nav-home {
+    width: 100%;
+    flex: 0 0 3.75rem;
 }
 
 .yc-logo {
     max-width: 60px;
-    margin: .5rem;
+    margin: .5rem 0;
 }
 
 .nav-list {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 .nav-item {
     text-decoration: none;
     color: #111;
-    margin: 0 1rem 0 1rem;
-}
-
-.navigation1 {
-
-}
-
-.navigation2 {
+    margin: 0 2rem 0 0;
 }
 
 .button {
@@ -67,6 +67,7 @@
     text-decoration: none;
     color: white;
     font-weight: 900;
+    text-align: center;
 }
 
 .button-orange {
@@ -262,6 +263,55 @@ input {
 
 .wwjw-dienstverband {
     grid-area: wwjw-dienstverband;
+    display: flex;
+    margin-top: 4rem;
+}
+
+.wwjw {
+    flex: 1 1 auto;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.wwjw .title {
+    font-size: 1.5rem;
+}
+
+.wwjw-nav {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.wwjw-nav li {
+    margin: .5rem 0 0.8rem 0;
+}
+
+.nav-item-wwjw {
+    padding: .5rem 1rem;
+    background-color: #111;
+    color: white;
+    text-decoration: none;
+    margin: 0 .6rem 0 0;
+    font-size: .8rem;
+    letter-spacing: .05rem;
+}
+
+.vacatures-wwjw {
+    color: #111;
+    font-weight: 700;
+    margin: 0 0 .7rem 0;
+}
+.dienstverband {
+    flex: 1 1 auto;
+    margin-right: 2rem;
+}
+
+.dienstverband .title {
+    font-size: 1.5rem;
 }
 
 .content {
@@ -284,7 +334,10 @@ input {
 
 .article {
     background-color: white;
-    border: 1px solid black;
+    box-shadow: 0 0 15px 0 #e8e8e8; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .article-title {
@@ -293,9 +346,20 @@ input {
 
 .article-body {
     margin: 1rem 1.5rem 1.7rem 1.5rem;
+    line-height: 1.5rem;
 }
 
+.article-button-orange {
+    background-color: #F77F00;
+    width: calc(100%-3rem);
+    margin: 1.5rem;
+}
 
+.article-button-black {
+    background-color: #111;
+    width: calc(100%-3rem);
+    margin: 1.5rem;
+}
 
 .vacatures {
     grid-area: vacatures;
@@ -309,10 +373,22 @@ input {
 .vacatures-img {
     grid-area: vacatures-img;
     width: 100%;
+    margin-top: 6rem;
 }
 
 .vacatures-block {
-    grid: vacatures-block;
+    grid-area: vacatures-block;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 18rem;
+    margin-top: -9rem;
+}
+
+.vacatures-top {
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+    padding: 2rem;
 }
 
 .nav-vacatures {
@@ -320,7 +396,28 @@ input {
     flex-direction: row;
     list-style-type: none;
 }
+
 .footer {
     grid-area: footer;
     background-color: #292929;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
+    grid-template-areas: 
+    ". footer-content .";
+}
+
+.footer-content {
+    grid-area: footer-content;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.footer-nav {
+    flex: 1 1 auto;
+}
+
+.footer-title {
+    color: white;
+    font-weight: 600;
+    letter-spacing: .05rem;
 }
