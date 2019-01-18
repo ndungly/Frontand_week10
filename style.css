@@ -16,20 +16,82 @@
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
+    display: grid;
     grid-area: header;
     background-color: white;
+    grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
+    grid-template-areas: 
+    ". header-content .";
+    align-items: center;
 }
 
-/* .yc-logo {
+.header-content {
+    grid-area: header-content;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+}
+
+.yc-logo {
     max-width: 60px;
-} */
+    margin: .5rem;
+}
 
 .nav-list {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #111;
+    margin: 0 1rem 0 1rem;
+}
+
+.navigation1 {
+
+}
+
+.navigation2 {
+}
+
+.button {
+    padding: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.button-orange {
+    background-color: #F77F00;
+}
+
+.button-black {
+    background-color: #111;
+}
+
+.nav-inschrijven,.nav-inloggen {
+    padding: .8rem 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: .8rem;
+    margin: .3rem;
+}
+
+.nav-inschrijven {
+    background-color: #F77F00;
+}
+
+.nav-inloggen {
+    background-color: #111;
 }
 
 main {
@@ -44,22 +106,40 @@ main {
     "vacatures vacatures vacatures";
 }
 
+.title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+}
+
 .search-job {
     grid-area: search-job;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
     grid-template-areas: 
     "banner banner banner"
-    ". banner-title ."
+    ". banner-title-1 ."
+    ". banner-title-2 ."
     ". search-panel .";
 }
 
-.banner-title {
-    grid-area: banner-title;
-    color: white;
+.banner-title-1 {
+    grid-area: banner-title-1;
     font-size: 2.5rem;
+    margin-top: -25rem;
+}
+
+.banner-title-2 {
+    grid-area: banner-title-2;
+    font-size: 2.5rem;
+    margin-top: -8.9em;
+}
+
+.h1-white {
     padding: 0.8rem;
-    background-color: #292929;
+    color: white;
+    padding: 0.3rem 1rem;
+    background-color: #111;
 }
 
 .h1-orange {
@@ -67,10 +147,18 @@ main {
 }
 
 .search-panel {
-    background-color: #292929;
+    background-color: #111;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1.8rem;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    height: 10rem;
+    margin-top: -5rem;
+}
+
+.sp-title {
+    color: white;
+    font-weight: 700;
 }
 
 .input-location {
@@ -81,8 +169,26 @@ main {
     flex: 1 1 auto;
 }
 
+input {
+    width: 100%;
+    height: 3rem;
+    padding: 1rem;
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    color: #292929;
+    font-family: "Work Sans";
+}
+
 .vacatures-zoeken {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-vacatures {
+    height: 3rem;
+    width: 100%;
+    background-color: #F77F00;
 }
 
 .banner {
