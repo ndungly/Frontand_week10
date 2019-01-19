@@ -1,0 +1,12 @@
+image-container {
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 50%;
+}
+
+/*percentage padding-bottom bepaalt aspect ratio van de afbeelding. 50% is w*h 2:1.*/
+
+.image {
+    min-width: 100%;
+    display: block;
+}
