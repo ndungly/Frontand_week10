@@ -238,12 +238,11 @@ input {
 .company-logos {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
 .company-logos li {
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
     margin: 3rem 1rem;
 }
 
@@ -283,7 +282,7 @@ input {
 .wwjw {
     flex: 1 1 22.5rem;
     margin-right: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
 }
